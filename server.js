@@ -4,16 +4,16 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql2');
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'manyag81@81',
-    database: 'gamedb',
+    host: 'traficrunner.springfest.in',
+    user: 'RemoteGame',
+    password: 'password',
+    database: 'Game',
 });
 
 db.connect((err) => {
