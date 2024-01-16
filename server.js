@@ -51,7 +51,7 @@ app.post('/api/score', (req, res) => {
         res.json({ success: true, message: 'Score is Updated', scores: userScores });
     }
     catch (err) {
-        return err;
+        res.json({err});
     }
 });
 
@@ -62,7 +62,7 @@ app.get('/api/score', (req, res) => {
         res.json({ scores: userScores, sfidMappedtoauthtoken: sfIdMapped, maxscore: sfid2maxscore });
     }
     catch (err) {
-        return err;
+        res.json({err});
     }
 });
 
@@ -83,7 +83,7 @@ app.post('/api/sfId2authtoken', (req, res) => {
         res.json({ success: true, message: 'sfId is Updated', sfIdMapped });
     }
     catch (err) {
-        return err;
+        res.json({err});
     }
 });
 
@@ -95,7 +95,7 @@ app.get('/api/sfId2authtoken', (req, res) => {
         res.json({ sfIdMapped });
     }
     catch (err) {
-        return err;
+        res.json({err});
     }
 });
 
@@ -123,7 +123,7 @@ app.post('/api/sfid2score', (req, res) => {
         });
     }
     catch (err) {
-        return err;
+        res.json({err});
     }
 });
 
